@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SignUp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GsmForum" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,6 +36,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="passwordTextFieldTyped:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Z2g-eF-E4f"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="예) 안강호, 정윤서" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qED-jX-RRA">
                                 <rect key="frame" x="42" y="179" width="262" height="34"/>
@@ -136,6 +139,8 @@
                     <connections>
                         <outlet property="idTextField" destination="qED-jX-RRA" id="Sfi-Qk-cRI"/>
                         <outlet property="idTextFieldDescription" destination="CzU-eq-uJc" id="EgT-qQ-EpL"/>
+                        <outlet property="passwordTextField" destination="CSS-PU-wEW" id="ALu-dx-yhS"/>
+                        <outlet property="passwordTextFieldDescription" destination="KQI-sD-sZs" id="yb3-rZ-DI3"/>
                         <outletCollection property="defaultHiddenCollection" destination="KQI-sD-sZs" collectionClass="NSMutableArray" id="cin-6v-4Cv"/>
                         <outletCollection property="defaultHiddenCollection" destination="CzU-eq-uJc" collectionClass="NSMutableArray" id="ckJ-UM-9ur"/>
                         <outletCollection property="defaultHiddenCollection" destination="ohc-WP-ba7" collectionClass="NSMutableArray" id="aVX-S8-frL"/>
