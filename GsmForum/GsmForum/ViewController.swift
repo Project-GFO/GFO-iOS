@@ -20,23 +20,34 @@ import UIKit
         @IBOutlet weak var emailTextFieldDescription: UILabel!
         
         @IBOutlet weak var phoneNumberTextField: UITextField!
-        @IBOutlet weak var phoneNumberTextFieldDescription: UILabel!
+        @IBOutlet weak var phoneNumberTextFieldDescription: UILabel!    
         
         @IBOutlet weak var phoneNumberCheckTextField: UITextField!
         @IBOutlet weak var phoneNumberCheckTextFieldDescription: UILabel!
         
-        
+        var eyeButton = UIButton(type : .custom)
         
         override func viewDidLoad() {
             super.viewDidLoad()
-            
+            setpasswordShownImage()
             for label in defaultHiddenCollection {
                 label.isHidden = true
                 label.textColor = .red
+            
             }
-
+            
         }
-
+        private func setpasswordShownImage(){
+            eyeButton  = UIButton.init(primaryAction: UIAction(handler: {[self]_ in passwordTextField.isSecureTextEntry.toggle()
+            }))
+            var buttonConfiguration = UIButton.Configuration.plain()
+            buttonConfiguration.imagePadding = 10
+            buttonConfiguration.baseBackgroundColor = .clear
+            let blackConfiguration = UIImage.SymbolConfiguration(weight: .black)
+            _ = UIImage(systemName: "eye.slash", withConfiguration: blackConfiguration)
+            self.passwordTextField.rightView = eyeButton
+            self.passwordTextField.rightViewMode = .always
+        }
         @IBAction func idTextFieldTyped(_ sender: UITextField) {
             idTextFieldDescription.isHidden = false
             
@@ -107,45 +118,4 @@ import UIKit
                 emailTextFieldDescription.text = "올바르지 않은 이메일 형식입니다"
             }
         }
-            
-        @IBAction func phoneTextFieldTyped(_ sender: UITextField) {
-            phoneNumberTextFieldDescription.isHidden = false
-            let convertDigit = phoneNumberTextField.text!.replacingOccurrences(of: #"\D"#, with: "", options: .regularExpression)
-            let count = convertDigit.count
-            switch count {
-            case 0:
-                phoneNumberTextFieldDescription.text = "휴대폰 번호는 필수로 입력해야합니다"
-                phoneNumberTextField.text = convertDigit
-            case 1...3:
-                phoneNumberTextField.text = convertDigit
-            case 4...7:
-                phoneNumberTextField.text = convertDigit.prefix(3) + "-" + convertDigit.suffix(convertDigit.count-3)
-                phoneNumberTextFieldDescription.text = "올바르지 않은 휴대폰 번호 입니다"
-            case 8...11:
-                let startIndex = convertDigit.index(convertDigit.startIndex, offsetBy: 3)
-                let endingIndex = convertDigit.index(convertDigit.startIndex, offsetBy: count-5)
-                let middleNumber = convertDigit[startIndex...endingIndex]
-                phoneNumberTextField.text = convertDigit.prefix(3) + "-" + middleNumber + "-" + convertDigit.suffix(4)
-                phoneNumberTextFieldDescription.text = "올바른 휴대폰 번호입니다"
-                phoneNumberTextFieldDescription.isHidden = true
-            default:
-                phoneNumberTextFieldDescription.text = "올바르지 않은 휴대폰 번호입니다"
-            }
-        }
-        
-        @IBAction func phoneNumberCheckTextFieldTyped(_ sender: UITextField) {
-            phoneNumberCheckTextFieldDescription.isHidden = false
-            let convertDigit = phoneNumberCheckTextField.text!.replacingOccurrences(of: #"\D"#, with: "", options: .regularExpression)
-            phoneNumberCheckTextField.text = convertDigit
-            let count = convertDigit.count
-            switch count {
-            case 0:
-                phoneNumberCheckTextFieldDescription.text = "인증번호를 입력해주세요"
-            case 6:
-                phoneNumberCheckTextFieldDescription.isHidden = true
-            default:
-                phoneNumberCheckTextFieldDescription.text = "인증번호는 6자리 숫자 입니다."
-            }
-        }
     }
-
