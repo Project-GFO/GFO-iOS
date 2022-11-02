@@ -19,17 +19,15 @@ import UIKit
         @IBOutlet weak var emailTextField: UITextField!
         @IBOutlet weak var emailTextFieldDescription: UILabel!
         
-        @IBOutlet weak var phoneNumberTextField: UITextField!
-        @IBOutlet weak var phoneNumberTextFieldDescription: UILabel!    
-        
-        @IBOutlet weak var phoneNumberCheckTextField: UITextField!
-        @IBOutlet weak var phoneNumberCheckTextFieldDescription: UILabel!
+        var isSecurePassword = false
+
         
         var eyeButton = UIButton(type : .custom)
         
         override func viewDidLoad() {
             super.viewDidLoad()
             setpasswordShownImage()
+            eyeButton.addTarget(self, action: #selector(eyeButtonDidTap(_:)), for: .touchUpInside)
             for label in defaultHiddenCollection {
                 label.isHidden = true
                 label.textColor = .red
@@ -43,8 +41,9 @@ import UIKit
             var buttonConfiguration = UIButton.Configuration.plain()
             buttonConfiguration.imagePadding = 10
             buttonConfiguration.baseBackgroundColor = .clear
-            let blackConfiguration = UIImage.SymbolConfiguration(weight: .black)
-            _ = UIImage(systemName: "eye.slash", withConfiguration: blackConfiguration)
+            self.eyeButton.setImage(UIImage(systemName: isSecurePassword ? "eye" : "eye.slash"), for: .normal)
+            self.eyeButton.configuration = buttonConfiguration
+            
             self.passwordTextField.rightView = eyeButton
             self.passwordTextField.rightViewMode = .always
         }
@@ -117,5 +116,10 @@ import UIKit
             } else {
                 emailTextFieldDescription.text = "올바르지 않은 이메일 형식입니다"
             }
+        }
+        
+        @objc func eyeButtonDidTap(_ sender: UIButton) {
+            isSecurePassword.toggle()
+            self.eyeButton.setImage(UIImage(systemName: isSecurePassword ? "eye" : "eye.slash"), for: .normal)
         }
     }
