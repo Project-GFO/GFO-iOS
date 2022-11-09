@@ -54,6 +54,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="SamepasswordTextFieldTyped:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="peL-Ll-VEA"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Ua-Ao-kJ6">
                                 <rect key="frame" x="42" y="567" width="228" height="34"/>
@@ -147,8 +150,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="SamepasswordTextField" destination="qtB-hi-RSM" id="Mtb-Dw-9zX"/>
+                        <outlet property="SamepasswordTextFieldDescription" destination="ohc-WP-ba7" id="eZM-Yj-gLh"/>
                         <outlet property="emailTextField" destination="7Ua-Ao-kJ6" id="PcV-OF-Lul"/>
-                        <outlet property="emailTextFieldDescription" destination="gLi-eM-QMb" id="zSU-0I-0Dp"/>
+                        <outlet property="emailTextFieldDescription" destination="gLi-eM-QMb" id="Ccj-uu-gD1"/>
                         <outlet property="idTextField" destination="qED-jX-RRA" id="Sfi-Qk-cRI"/>
                         <outlet property="idTextFieldDescription" destination="CzU-eq-uJc" id="EgT-qQ-EpL"/>
                         <outlet property="passwordTextField" destination="CSS-PU-wEW" id="ALu-dx-yhS"/>

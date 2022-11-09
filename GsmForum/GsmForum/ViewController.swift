@@ -19,29 +19,50 @@ import UIKit
         @IBOutlet weak var emailTextField: UITextField!
         @IBOutlet weak var emailTextFieldDescription: UILabel!
         
-        var isSecurePassword = false
-
+        @IBOutlet weak var samepasswordTextField: UITextField!
+        @IBOutlet weak var samepasswordTextFieldDescription: UILabel!
+        
+        var isSecurePassword = true
         
         var eyeButton = UIButton(type : .custom)
         
+        var eyeeButton = UIButton(type : .custom)
+        
         override func viewDidLoad() {
             super.viewDidLoad()
+            setsamepasswordShownImage()
+            eyeeButton.addTarget(self, action: #selector(eyeeButtonDidTap(_:)), for: .touchUpInside)
+            
             setpasswordShownImage()
             eyeButton.addTarget(self, action: #selector(eyeButtonDidTap(_:)), for: .touchUpInside)
+            
             for label in defaultHiddenCollection {
                 label.isHidden = true
                 label.textColor = .red
+                emailTextFieldDescription.isHidden = true
             
             }
             
         }
-        private func setpasswordShownImage(){
-            eyeButton  = UIButton.init(primaryAction: UIAction(handler: {[self]_ in passwordTextField.isSecureTextEntry.toggle()
-            }))
+        private func setsamepasswordShownImage(){
+            eyeeButton = .init()
+            samepasswordTextField.isSecureTextEntry = isSecurePassword
             var buttonConfiguration = UIButton.Configuration.plain()
             buttonConfiguration.imagePadding = 10
             buttonConfiguration.baseBackgroundColor = .clear
-            self.eyeButton.setImage(UIImage(systemName: isSecurePassword ? "eye" : "eye.slash"), for: .normal)
+            self.eyeeButton.setImage(UIImage(systemName: isSecurePassword ? "eyes" : "eyes.inverse"), for: .normal)
+            self.eyeeButton.configuration = buttonConfiguration
+            
+            self.samepasswordTextField.rightView = eyeeButton
+            self.samepasswordTextField.rightViewMode = .always
+        }
+        private func setpasswordShownImage(){
+            eyeButton = .init()
+            passwordTextField.isSecureTextEntry = isSecurePassword
+            var buttonConfiguration = UIButton.Configuration.plain()
+            buttonConfiguration.imagePadding = 10
+            buttonConfiguration.baseBackgroundColor = .clear
+            self.eyeButton.setImage(UIImage(systemName: isSecurePassword ? "eyes" : "eyes.inverse"), for: .normal)
             self.eyeButton.configuration = buttonConfiguration
             
             self.passwordTextField.rightView = eyeButton
@@ -102,6 +123,16 @@ import UIKit
             }
         }
         
+        @IBAction func SamepasswordTextFieldTyped(_ sender: UITextField){
+            samepasswordTextFieldDescription.isHidden = false
+            if samepasswordTextField.text!.isEmpty {
+                samepasswordTextFieldDescription.text = "비밀번호를 입력해주세요!"
+            }
+            else if samepasswordTextField.text == passwordTextField.text {
+                samepasswordTextFieldDescription.text = ""
+            }
+        }
+
         @IBAction func emailTextFieldTyped(_ sender: UITextField) {
             emailTextFieldDescription.isHidden = false
             
@@ -120,6 +151,13 @@ import UIKit
         
         @objc func eyeButtonDidTap(_ sender: UIButton) {
             isSecurePassword.toggle()
-            self.eyeButton.setImage(UIImage(systemName: isSecurePassword ? "eye" : "eye.slash"), for: .normal)
+            self.eyeButton.setImage(UIImage(systemName: isSecurePassword ? "eyes" : "eyes.inverse"), for: .normal)
+            passwordTextField.isSecureTextEntry = isSecurePassword
+        }
+        
+        @objc func eyeeButtonDidTap(_ sender: UIButton) {
+            isSecurePassword.toggle()
+            self.eyeeButton.setImage(UIImage(systemName: isSecurePassword ? "eyes" : "eyes.inverse"), for: .normal)
+            samepasswordTextField.isSecureTextEntry = isSecurePassword
         }
     }
