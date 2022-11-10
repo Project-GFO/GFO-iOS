@@ -9,21 +9,30 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate{
 
-
     @IBOutlet weak var textfieldEmailid: UITextField!
-    
-    
+
     @IBOutlet weak var textfieldpassword: UITextField!
     
-    @IBAction func showpass(_ sender: UIButton) {
-        
-    }
+    var IsSecurePassword = false
+    
+    var eyesButton = UIButton(type: .custom)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        PasswordShownImage()
+        eyesButton.addTarget(self, action: #selector(eyesButtonsDidTap(_:)), for: .touchUpInside)
+    }
+    
+    private func PasswordShownImage() {
+        eyesButton = UIButton.init(primaryAction: UIAction(handler: {[self]_ in textfieldpassword.isSecureTextEntry.toggle()}))
+        var ButtonConfiguration = UIButton.Configuration.plain()
+        ButtonConfiguration.imagePadding = 10
+        ButtonConfiguration.baseBackgroundColor = .clear
+        self.eyesButton.setImage(UIImage(systemName: IsSecurePassword ? "eye.slash" : "eyes"), for: .normal)
+        self.eyesButton.configuration = ButtonConfiguration
         
-        textfieldEmailid.delegate = self
-        textfieldpassword.delegate = self
+        self.textfieldpassword.rightView = eyesButton
+        self.textfieldpassword.rightViewMode = .always
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -32,13 +41,8 @@ class ViewController: UIViewController, UITextFieldDelegate{
         return true
     }
 
-    @IBAction func buttonsignin(_ sender: Any) {
-    }
-    
-    func isValidEmail(testStr:String) -> Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        let emailTest = NSPredicate(format: "SELF MATCHES", emailRegEx)
-        return emailTest.evaluate(with: testStr)
+    @objc func eyesButtonsDidTap(_ sender: UIButton) {
+        IsSecurePassword.toggle()
+        self.eyesButton.setImage(UIImage(systemName: IsSecurePassword ? "eye.slash" : "eyes"), for: .normal)
     }
 }
-
