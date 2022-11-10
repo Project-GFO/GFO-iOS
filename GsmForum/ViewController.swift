@@ -10,8 +10,9 @@ import UIKit
 class ViewController: UIViewController, UITextFieldDelegate{
 
     @IBOutlet weak var textfieldEmailid: UITextField!
-
     @IBOutlet weak var textfieldpassword: UITextField!
+    @IBOutlet weak var FindpasswordButton: UIButton!
+    @IBOutlet weak var SignUpButton: UIButton!
     
     var IsSecurePassword = false
     
@@ -28,12 +29,24 @@ class ViewController: UIViewController, UITextFieldDelegate{
         var ButtonConfiguration = UIButton.Configuration.plain()
         ButtonConfiguration.imagePadding = 10
         ButtonConfiguration.baseBackgroundColor = .clear
-        self.eyesButton.setImage(UIImage(systemName: IsSecurePassword ? "eye.slash" : "eyes"), for: .normal)
+        self.eyesButton.setImage(UIImage(systemName: IsSecurePassword ? "eyes" : "eye.slash"), for: .normal)
         self.eyesButton.configuration = ButtonConfiguration
         
         self.textfieldpassword.rightView = eyesButton
         self.textfieldpassword.rightViewMode = .always
     }
+    
+    @IBAction func EmailTextfield(_ sender: UITextField) {
+        _ = "[A-Z0-9a-z._%+-]+@gsm.hs.kr"
+        
+    }
+    
+    
+    @IBAction func PasswordTextfield(_ sender: UITextField) {
+        _ = "^(?=.*[A-Za-z])(?=.*[0-9])(?=.*[!@#$%^&*()_+=-]).{8,50}"
+        
+    }
+    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.textfieldEmailid.resignFirstResponder()
@@ -43,6 +56,6 @@ class ViewController: UIViewController, UITextFieldDelegate{
 
     @objc func eyesButtonsDidTap(_ sender: UIButton) {
         IsSecurePassword.toggle()
-        self.eyesButton.setImage(UIImage(systemName: IsSecurePassword ? "eye.slash" : "eyes"), for: .normal)
+        self.eyesButton.setImage(UIImage(systemName: IsSecurePassword ? "eyes" : "eye.slash"), for: .normal)
     }
 }
