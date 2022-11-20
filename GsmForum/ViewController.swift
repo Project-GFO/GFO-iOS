@@ -15,7 +15,6 @@ class ViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var SignUpButton: UIButton!
     
     var IsSecurePassword = false
-    
     var eyesButton = UIButton(type: .custom)
     
     override func viewDidLoad() {

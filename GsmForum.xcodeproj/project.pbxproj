@@ -14,6 +14,7 @@
 		D03FA95928F80D7E009AA311 /* GsmForum.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D03FA95728F80D7E009AA311 /* GsmForum.xcdatamodeld */; };
 		D03FA95B28F80D7F009AA311 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D03FA95A28F80D7F009AA311 /* Assets.xcassets */; };
 		D03FA95E28F80D7F009AA311 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D03FA95C28F80D7F009AA311 /* LaunchScreen.storyboard */; };
+		D0AEC58A292A63D800208456 /* Noto_Sans_SC in Resources */ = {isa = PBXBuildFile; fileRef = D0AEC589292A63D800208456 /* Noto_Sans_SC */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		D03FA95A28F80D7F009AA311 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D03FA95D28F80D7F009AA311 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D03FA95F28F80D7F009AA311 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0AEC589292A63D800208456 /* Noto_Sans_SC */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Noto_Sans_SC; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		D03FA94D28F80D7E009AA311 /* GsmForum */ = {
 			isa = PBXGroup;
 			children = (
+				D0AEC588292A637E00208456 /* Fonts */,
 				D03FA94E28F80D7E009AA311 /* AppDelegate.swift */,
 				D03FA95028F80D7E009AA311 /* SceneDelegate.swift */,
 				D03FA95228F80D7E009AA311 /* ViewController.swift */,
@@ -68,6 +71,14 @@
 				D03FA95728F80D7E009AA311 /* GsmForum.xcdatamodeld */,
 			);
 			path = GsmForum;
+			sourceTree = "<group>";
+		};
+		D0AEC588292A637E00208456 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D0AEC589292A63D800208456 /* Noto_Sans_SC */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D03FA95E28F80D7F009AA311 /* LaunchScreen.storyboard in Resources */,
+				D0AEC58A292A63D800208456 /* Noto_Sans_SC in Resources */,
 				D03FA95B28F80D7F009AA311 /* Assets.xcassets in Resources */,
 				D03FA95628F80D7E009AA311 /* Main.storyboard in Resources */,
 			);
