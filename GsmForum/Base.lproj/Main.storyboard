@@ -29,11 +29,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="fill" placeholder="   이메일을 입력해주세요." adjustsFontForContentSizeCategory="YES" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="GBj-77-TEf">
-                                <rect key="frame" x="32" y="374" width="327" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="   이메일을 입력해주세요." adjustsFontForContentSizeCategory="YES" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="GBj-77-TEf">
+                                <rect key="frame" x="24" y="360.66666666666669" width="327" height="52"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="Euw-cI-32Y"/>
+                                    <constraint firstAttribute="width" constant="327" id="Va8-fY-IbC"/>
+                                </constraints>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="NotoSansSC-Medium" family="Noto Sans SC" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
@@ -41,10 +44,13 @@
                                     <action selector="EmailTextfield:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="cwS-Do-ims"/>
                                 </connections>
                             </textField>
-                            <textField contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="   비밀번호를 입력해주세요." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RcP-Gu-0Bf">
-                                <rect key="frame" x="32" y="442" width="327" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="   비밀번호를 입력해주세요." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RcP-Gu-0Bf">
+                                <rect key="frame" x="24" y="427.66666666666669" width="327" height="52"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="327" id="Gqq-LC-QN8"/>
+                                    <constraint firstAttribute="height" constant="52" id="PS8-8b-DoS"/>
+                                </constraints>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="NotoSansSC-Medium" family="Noto Sans SC" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -52,17 +58,15 @@
                                     <action selector="PasswordTextfield:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="9wU-yB-xhy"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="로그인" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xy-Hn-Jjq">
-                                <rect key="frame" x="163" y="73" width="65" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로그인" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xy-Hn-Jjq">
+                                <rect key="frame" x="161.66666666666666" y="63.000000000000007" width="52" height="26.333333333333336"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
-                                <fontDescription key="fontDescription" name="NotoSansSC-Regular" family="Noto Sans SC" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="NotoSansSC-Regular" family="Noto Sans SC" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFd-hX-rg9">
-                                <rect key="frame" x="221" y="793" width="75" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFd-hX-rg9">
+                                <rect key="frame" x="206" y="779.66666666666663" width="76" height="34.333333333333371"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -75,14 +79,6 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="비밀번호를 잊으셨나요?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Oq-QA-4TT">
-                                <rect key="frame" x="61" y="617" width="188" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="NotoSansSC-Regular" family="Noto Sans SC" pointSize="12"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                                <size key="shadowOffset" width="27" height="7"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11o-vQ-6iu">
                                 <rect key="frame" x="113" y="107" width="0.0" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -90,69 +86,57 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kix-KS-bnC">
-                                <rect key="frame" x="213" y="626" width="90" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="NotoSansSC-Regular" family="Noto Sans SC" pointSize="12"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="비밀번호 찾기">
-                                    <color key="titleColor" systemColor="linkColor"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxS-qb-iud">
-                                <rect key="frame" x="32" y="557" width="327" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxS-qb-iud">
+                                <rect key="frame" x="24" y="557.33333333333337" width="327" height="60"/>
                                 <color key="backgroundColor" name="Bu"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="327" id="EY2-b1-03J"/>
+                                    <constraint firstAttribute="height" constant="60" id="J7L-YI-01U"/>
+                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="로그인">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
                                 </buttonConfiguration>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="아직 회원이 아니신가요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OA9-iA-pxb">
-                                <rect key="frame" x="113" y="795" width="126" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아직 회원이 아니신가요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OA9-iA-pxb">
+                                <rect key="frame" x="98.666666666666686" y="786" width="115" height="18"/>
                                 <fontDescription key="fontDescription" name="NotoSansSC-Regular" family="Noto Sans SC" pointSize="12"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="자동로그인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mvg-cz-Hhe">
-                                <rect key="frame" x="61" y="508" width="65" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="NotoSansSC-Regular" family="Noto Sans SC" pointSize="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="자동로그인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mvg-cz-Hhe">
+                                <rect key="frame" x="55.666666666666657" y="496.33333333333331" width="60.666666666666686" height="25.666666666666686"/>
+                                <fontDescription key="fontDescription" name="NotoSansSC-Regular" family="Noto Sans SC" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="아이디저장" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hj5-9Z-JE9">
-                                <rect key="frame" x="184" y="508" width="65" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="NotoSansSC-Regular" family="Noto Sans SC" pointSize="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="아이디저장" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hj5-9Z-JE9">
+                                <rect key="frame" x="178" y="496.33333333333331" width="60.666666666666657" height="25.999999999999943"/>
+                                <fontDescription key="fontDescription" name="NotoSansSC-Regular" family="Noto Sans SC" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zar-py-ELG">
-                                <rect key="frame" x="32" y="501" width="28" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" systemColor="systemGray4Color"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zar-py-ELG">
+                                <rect key="frame" x="24" y="496.33333333333331" width="25.666666666666671" height="25.666666666666686"/>
+                                <color key="tintColor" systemColor="systemGray2Color"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="circle" catalog="system">
                                     <color key="titleColor" systemColor="opaqueSeparatorColor"/>
                                     <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDf-67-9DY">
-                                <rect key="frame" x="148" y="502" width="28" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" systemColor="systemGray4Color"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDf-67-9DY">
+                                <rect key="frame" x="131.33333333333337" y="496.33333333333331" width="25.666666666666657" height="25.666666666666686"/>
+                                <color key="tintColor" systemColor="systemGray2Color"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="circle" catalog="system">
-                                    <color key="titleColor" systemColor="opaqueSeparatorColor"/>
-                                    <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" name="AccentColor"/>
+                                    <color key="titleShadowColor" name="Bu"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="characterWrap" numberOfLines="3" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nmp-gw-EoN">
-                                <rect key="frame" x="32" y="177" width="196" height="176"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="characterWrap" numberOfLines="3" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nmp-gw-EoN">
+                                <rect key="frame" x="24" y="186.33333333333331" width="183" height="139.33333333333331"/>
                                 <string key="text">GSM의
 모든 정보를
 공유하다</string>
@@ -160,10 +144,64 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmV-hv-geQ">
+                                <rect key="frame" x="196" y="622.33333333333337" width="89" height="32"/>
+                                <fontDescription key="fontDescription" name="NotoSansSC-Regular" family="Noto Sans SC" pointSize="0.0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="비밀번호 찾기"/>
+                                <buttonConfiguration key="configuration" style="plain" title="비밀번호 찾기">
+                                    <fontDescription key="titleFontDescription" name="NotoSansSC-Regular" family="Noto Sans SC" pointSize="12"/>
+                                    <color key="baseForegroundColor" systemColor="linkColor"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호를 잊으셨나요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ToG-IB-fej">
+                                <rect key="frame" x="90" y="629.33333333333337" width="112.33333333333331" height="17.666666666666629"/>
+                                <fontDescription key="fontDescription" name="NotoSansSC-Regular" family="Noto Sans SC" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RcP-Gu-0Bf" firstAttribute="top" secondItem="GBj-77-TEf" secondAttribute="bottom" constant="15" id="1N9-iE-BPd"/>
+                            <constraint firstItem="Mvg-cz-Hhe" firstAttribute="top" secondItem="RcP-Gu-0Bf" secondAttribute="bottom" constant="16.5" id="4Qj-Ku-UAN"/>
+                            <constraint firstItem="cxS-qb-iud" firstAttribute="top" secondItem="zar-py-ELG" secondAttribute="bottom" constant="35.5" id="6do-nG-LN8"/>
+                            <constraint firstItem="4xy-Hn-Jjq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="71E-um-7hL"/>
+                            <constraint firstItem="4xy-Hn-Jjq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="161.5" id="8Vh-lD-ppP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hj5-9Z-JE9" secondAttribute="trailing" constant="151.5" id="E6Q-Te-kH3"/>
+                            <constraint firstItem="UDf-67-9DY" firstAttribute="leading" secondItem="Mvg-cz-Hhe" secondAttribute="trailing" constant="15" id="EYn-Al-IlL"/>
+                            <constraint firstItem="zar-py-ELG" firstAttribute="top" secondItem="RcP-Gu-0Bf" secondAttribute="bottom" constant="16.5" id="FVc-EW-vXf"/>
+                            <constraint firstItem="OA9-iA-pxb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="98.5" id="FkF-xa-wPg"/>
+                            <constraint firstItem="GBj-77-TEf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="Mgd-02-m2p"/>
+                            <constraint firstItem="UDf-67-9DY" firstAttribute="top" secondItem="RcP-Gu-0Bf" secondAttribute="bottom" constant="16.5" id="PXx-0D-NZF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Nmp-gw-EoN" secondAttribute="trailing" constant="168" id="PaO-tJ-zxe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GBj-77-TEf" secondAttribute="trailing" constant="24" id="Po5-bQ-Mjf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cxS-qb-iud" secondAttribute="trailing" constant="24" id="SK5-6h-2GR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cxS-qb-iud" secondAttribute="trailing" constant="24" id="WHG-5X-FvH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TFd-hX-rg9" secondAttribute="trailing" constant="93" id="WNi-r1-KTB"/>
+                            <constraint firstItem="hj5-9Z-JE9" firstAttribute="leading" secondItem="UDf-67-9DY" secondAttribute="trailing" constant="6" id="YS3-Lp-u05"/>
+                            <constraint firstItem="ToG-IB-fej" firstAttribute="top" secondItem="cxS-qb-iud" secondAttribute="bottom" constant="12" id="Yls-2M-HHj"/>
+                            <constraint firstItem="cxS-qb-iud" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="ae2-f3-XIS"/>
+                            <constraint firstItem="Nmp-gw-EoN" firstAttribute="top" secondItem="4xy-Hn-Jjq" secondAttribute="bottom" constant="97" id="arl-ud-oEO"/>
+                            <constraint firstItem="hj5-9Z-JE9" firstAttribute="top" secondItem="RcP-Gu-0Bf" secondAttribute="bottom" constant="16.5" id="cEx-Ec-VS3"/>
+                            <constraint firstItem="cxS-qb-iud" firstAttribute="top" secondItem="UDf-67-9DY" secondAttribute="bottom" constant="35.5" id="cbf-dh-3HT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OA9-iA-pxb" secondAttribute="bottom" constant="6" id="dSF-b8-BJI"/>
+                            <constraint firstItem="ToG-IB-fej" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="eKt-X4-0MU"/>
+                            <constraint firstAttribute="bottom" secondItem="TFd-hX-rg9" secondAttribute="bottom" constant="30" id="f8Z-Ul-6hx"/>
+                            <constraint firstItem="zar-py-ELG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="fIH-v1-tPK"/>
+                            <constraint firstItem="Mvg-cz-Hhe" firstAttribute="leading" secondItem="zar-py-ELG" secondAttribute="trailing" constant="6" id="gLS-oe-qL7"/>
+                            <constraint firstItem="pmV-hv-geQ" firstAttribute="top" secondItem="cxS-qb-iud" secondAttribute="bottom" constant="5" id="jMY-RC-9J9"/>
+                            <constraint firstItem="cxS-qb-iud" firstAttribute="top" secondItem="hj5-9Z-JE9" secondAttribute="bottom" constant="35" id="keN-v5-a5J"/>
+                            <constraint firstItem="RcP-Gu-0Bf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="sGy-pv-0Tw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pmV-hv-geQ" secondAttribute="trailing" constant="90" id="sjE-1x-O7L"/>
+                            <constraint firstItem="cxS-qb-iud" firstAttribute="top" secondItem="Mvg-cz-Hhe" secondAttribute="bottom" constant="35.5" id="v6H-0y-TYg"/>
+                            <constraint firstItem="Nmp-gw-EoN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="w49-vZ-aZE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RcP-Gu-0Bf" secondAttribute="trailing" constant="24" id="wdr-CY-GWB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4xy-Hn-Jjq" secondAttribute="trailing" constant="161.5" id="xTV-Zp-S5r"/>
+                            <constraint firstItem="GBj-77-TEf" firstAttribute="top" secondItem="Nmp-gw-EoN" secondAttribute="bottom" constant="35" id="y8H-OQ-Zmg"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="SignUpButton" destination="TFd-hX-rg9" id="WiD-3q-a56"/>
@@ -183,19 +221,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="비밀번호 찾기" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usl-CU-Krb">
-                                <rect key="frame" x="131" y="75" width="129" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
-                                <fontDescription key="fontDescription" name="NotoSansSC-Regular" family="Noto Sans SC" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="fill" placeholder="   이메일을 입력해주세요." adjustsFontForContentSizeCategory="YES" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="foA-fB-YsU">
-                                <rect key="frame" x="32" y="312" width="327" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="fill" placeholder="   이메일을 입력해주세요." adjustsFontForContentSizeCategory="YES" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="foA-fB-YsU">
+                                <rect key="frame" x="24" y="290.66666666666669" width="327" height="52"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="Ap6-dL-GAQ"/>
+                                    <constraint firstAttribute="width" constant="327" id="OnP-Xk-q57"/>
+                                </constraints>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="NotoSansSC-Medium" family="Noto Sans SC" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
@@ -203,11 +236,14 @@
                                     <action selector="EmailTextfield:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="pmx-Pc-jCj"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="fill" placeholder="   인증번호를 입력해주세요." adjustsFontForContentSizeCategory="YES" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="KYq-a6-lwL">
-                                <rect key="frame" x="32" y="385" width="327" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="fill" placeholder="   인증번호를 입력해주세요." adjustsFontForContentSizeCategory="YES" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="KYq-a6-lwL">
+                                <rect key="frame" x="24" y="355" width="327" height="52"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="28n-0K-TLu"/>
+                                    <constraint firstAttribute="width" constant="327" id="DN0-iO-GRE"/>
+                                </constraints>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="NotoSansSC-Medium" family="Noto Sans SC" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
@@ -215,34 +251,65 @@
                                     <action selector="EmailTextfield:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="30U-zN-qhS"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UuS-wc-tfz">
-                                <rect key="frame" x="32" y="496" width="327" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UuS-wc-tfz">
+                                <rect key="frame" x="24" y="458.66666666666669" width="327" height="60.000000000000057"/>
                                 <color key="backgroundColor" name="Bu"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="327" id="9rX-y7-L0t"/>
+                                    <constraint firstAttribute="height" constant="60" id="q7D-CE-N2l"/>
+                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="확인">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
                                 </buttonConfiguration>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="등록할때 사용했던 학교 이메일로 인증을 통해 비밀번호를 바꿀 수 있습니다. 전송된 인증번호를 확인해주세요." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRm-6d-Qmc">
-                                <rect key="frame" x="32" y="269" width="327" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="등록할때 사용했던 학교 이메일로 인증을 통해 비밀번호를 바꿀 수 있습니다. 전송된 인증번호를 확인해주세요." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRm-6d-Qmc">
+                                <rect key="frame" x="24" y="240.66666666666663" width="284" height="35"/>
                                 <fontDescription key="fontDescription" name="NotoSansSC-Regular" family="Noto Sans SC" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Forgot Password?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3uT-SH-frj">
-                                <rect key="frame" x="32" y="180" width="254" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Forgot Password?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3uT-SH-frj">
+                                <rect key="frame" x="24" y="114.66666666666667" width="236" height="39.333333333333329"/>
                                 <color key="tintColor" name="Bu"/>
-                                <fontDescription key="fontDescription" name="NotoSansSC-Bold" family="Noto Sans SC" pointSize="28"/>
+                                <fontDescription key="fontDescription" name="NotoSansSC-Bold" family="Noto Sans SC" pointSize="27"/>
                                 <color key="textColor" name="Bu"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호 찾기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usl-CU-Krb">
+                                <rect key="frame" x="134" y="62.999999999999993" width="107" height="17.666666666666664"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
+                                <fontDescription key="fontDescription" name="NotoSansSC-Regular" family="Noto Sans SC" pointSize="18"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="apy-cj-GD0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="apy-cj-GD0" firstAttribute="trailing" secondItem="UuS-wc-tfz" secondAttribute="trailing" constant="24" id="4gT-MM-t68"/>
+                            <constraint firstItem="UuS-wc-tfz" firstAttribute="leading" secondItem="apy-cj-GD0" secondAttribute="leading" constant="24" id="7rx-yg-f9a"/>
+                            <constraint firstItem="apy-cj-GD0" firstAttribute="bottom" secondItem="UuS-wc-tfz" secondAttribute="bottom" constant="291.5" id="GE3-Ww-xpx"/>
+                            <constraint firstItem="aRm-6d-Qmc" firstAttribute="leading" secondItem="apy-cj-GD0" secondAttribute="leading" constant="24" id="NH1-wa-rjb"/>
+                            <constraint firstItem="usl-CU-Krb" firstAttribute="top" secondItem="apy-cj-GD0" secondAttribute="top" constant="16" id="OFe-79-gRk"/>
+                            <constraint firstItem="apy-cj-GD0" firstAttribute="trailing" secondItem="usl-CU-Krb" secondAttribute="trailing" constant="134" id="U5I-xm-WTZ"/>
+                            <constraint firstItem="3uT-SH-frj" firstAttribute="top" secondItem="usl-CU-Krb" secondAttribute="bottom" constant="34" id="W8s-EP-Cfk"/>
+                            <constraint firstItem="UuS-wc-tfz" firstAttribute="top" secondItem="KYq-a6-lwL" secondAttribute="bottom" constant="51.5" id="WrG-eb-199"/>
+                            <constraint firstItem="KYq-a6-lwL" firstAttribute="top" secondItem="foA-fB-YsU" secondAttribute="bottom" constant="12.5" id="YKg-QO-nOU"/>
+                            <constraint firstItem="usl-CU-Krb" firstAttribute="leading" secondItem="apy-cj-GD0" secondAttribute="leading" constant="134" id="adJ-z1-iRo"/>
+                            <constraint firstItem="foA-fB-YsU" firstAttribute="leading" secondItem="apy-cj-GD0" secondAttribute="leading" constant="24" id="bck-cR-qkI"/>
+                            <constraint firstItem="apy-cj-GD0" firstAttribute="trailing" secondItem="3uT-SH-frj" secondAttribute="trailing" constant="115" id="bsl-7s-sKX"/>
+                            <constraint firstItem="apy-cj-GD0" firstAttribute="trailing" secondItem="aRm-6d-Qmc" secondAttribute="trailing" constant="67" id="etJ-w8-NcC"/>
+                            <constraint firstItem="apy-cj-GD0" firstAttribute="trailing" secondItem="KYq-a6-lwL" secondAttribute="trailing" constant="24" id="khZ-V9-00Q"/>
+                            <constraint firstItem="KYq-a6-lwL" firstAttribute="top" secondItem="foA-fB-YsU" secondAttribute="bottom" constant="12.5" id="lwe-Yl-Bt7"/>
+                            <constraint firstItem="aRm-6d-Qmc" firstAttribute="top" secondItem="3uT-SH-frj" secondAttribute="bottom" constant="86.5" id="mb8-of-pf4"/>
+                            <constraint firstItem="3uT-SH-frj" firstAttribute="leading" secondItem="apy-cj-GD0" secondAttribute="leading" constant="24" id="opY-SL-PVx"/>
+                            <constraint firstItem="foA-fB-YsU" firstAttribute="top" secondItem="aRm-6d-Qmc" secondAttribute="bottom" constant="15" id="rFh-Gj-pbl"/>
+                            <constraint firstItem="KYq-a6-lwL" firstAttribute="leading" secondItem="apy-cj-GD0" secondAttribute="leading" constant="24" id="vpg-ur-kTx"/>
+                            <constraint firstItem="foA-fB-YsU" firstAttribute="top" secondItem="aRm-6d-Qmc" secondAttribute="bottom" constant="15" id="xz5-80-NvJ"/>
+                            <constraint firstItem="apy-cj-GD0" firstAttribute="trailing" secondItem="foA-fB-YsU" secondAttribute="trailing" constant="24" id="z7u-ax-S7i"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ysB-BC-LL2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -253,8 +320,11 @@
     <resources>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
         <image name="circle" catalog="system" width="128" height="123"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Bu">
-            <color red="0.50980392156862742" green="0.60392156862745094" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.50999999046325684" green="0.60399997234344482" blue="0.88999998569488525" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -265,8 +335,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
